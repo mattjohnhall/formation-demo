@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+
+# Package manager
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+
+# Build outputs
+dist/
+build/
+storybook-static/
+coverage/
+
+# Turborepo
+.turbo/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+vite.config.ts.timestamp-*
+.vite/
+
+# Storybook
+storybook-static/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+
+# Testing
+playwright-report/
+test-results/
+
+# Generated icon exports
+packages/formation-icons/src/index.ts
+
+# Misc
+.cache/
+.temp/
+tmp/
+
+# Mac
+.AppleDouble
+.LSOverride
+._*
+
+# Storybook cache
+node_modules/.cache/storybook

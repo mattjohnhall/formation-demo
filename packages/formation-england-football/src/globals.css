@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@source "../../../packages/**/src/**/*.{ts,tsx}";
+@source "../../../apps/storybook/**/*.{ts,tsx}";
+
+@theme {
+  --color-ef-red-50: #FCE9E8;
+  --color-ef-red-100: #F9D4D2;
+  --color-ef-red-200: #F4A8A4;
+  --color-ef-red-300: #EE7D77;
+  --color-ef-red-400: #E8514A;
+  --color-ef-red-500: #E1261C;
+  --color-ef-red-600: #B51E17;
+  --color-ef-red-700: #881711;
+  --color-ef-red-800: #5B0F0B;
+  --color-ef-red-900: #2D0806;
+
+  --color-ef-navy-50: #D2E6FE;
+  --color-ef-navy-100: #AACFFE;
+  --color-ef-navy-200: #4F9DFC;
+  --color-ef-navy-300: #046FF1;
+  --color-ef-navy-400: #024597;
+  --color-ef-navy-500: #011E41;
+  --color-ef-navy-600: #011732;
+  --color-ef-navy-700: #011228;
+  --color-ef-navy-800: #000C19;
+  --color-ef-navy-900: #00070F;
+
+  --color-ef-light-blue: #AEBDE6;
+
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F0F1F4;
+  --color-gray-200: #E4E7EC;
+  --color-gray-300: #D6D9E1;
+  --color-gray-400: #CACED9;
+  --color-gray-500: #BBC1CE;
+  --color-gray-600: #8E98AE;
+  --color-gray-700: #626E88;
+  --color-gray-800: #424A5C;
+  --color-gray-900: #20242C;
+
+  --color-red-50: #FAE5E6;
+  --color-red-100: #F5C7C8;
+  --color-red-200: #EB9495;
+  --color-red-300: #E05C5E;
+  --color-red-400: #D7282B;
+  --color-red-500: #A01E21;
+  --color-red-600: #81181A;
+  --color-red-700: #5E1213;
+  --color-red-800: #400C0D;
+  --color-red-900: #1E0606;
+
+  --color-yellow-50: #FEF9E7;
+  --color-yellow-100: #FCF3CF;
+  --color-yellow-200: #FAE9A3;
+  --color-yellow-300: #F7DD73;
+  --color-yellow-400: #F5D143;
+  --color-yellow-500: #F2C714;
+  --color-yellow-600: #C6A10B;
+  --color-yellow-700: #967908;
+  --color-yellow-800: #655206;
+  --color-yellow-900: #302703;
+
+  --color-green-50: #F5F9EB;
+  --color-green-100: #ECF3D8;
+  --color-green-200: #D8E8B0;
+  --color-green-300: #C5DC89;
+  --color-green-400: #B1D161;
+  --color-green-500: #A0C63C;
+  --color-green-600: #7E9E2E;
+  --color-green-700: #5F7623;
+  --color-green-800: #3F4F17;
+  --color-green-900: #20270C;
+
+  --color-error-900: #DD221A;
+  --color-error-500: #EB7A76;
+  --color-error-100: #FBE1DF;
+
+  --color-progress-900: #039855;
+  --color-progress-500: #D1FADF;
+  --color-progress-100: #ECFDF3;
+
+  --color-warning-900: #FF6700;
+  --color-warning-500: #FFA970;
+  --color-warning-100: #FFEDE0;
+
+  --color-a11y-yellow: #FD0;
+  --color-a11y-black: #1B1C1E;
+
+  --font-heading: "FS Dillon", sans-serif;
+  --font-body: "FS Dillon", sans-serif;
+  --font-display: "FS Dillon", sans-serif;
+
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@layer base {
+  *:focus-visible {
+    color: var(--color-a11y-black);
+    background-color: var(--color-a11y-yellow);
+    box-shadow: 0 -2px var(--color-a11y-yellow),0 2px var(--color-a11y-black);
+    outline: 3px solid rgb(0 0 0 / 0%);
+  } 
+}
