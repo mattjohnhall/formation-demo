@@ -1,0 +1,36 @@
+# Source stories
+**/*.stories.ts
+**/*.stories.tsx
+**/*.stories.mdx
+
+# Tests
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Storybook
+.storybook/
+storybook-static/
+apps/storybook/
+
+# Documentation
+README-draft.md
+docs/
+
+# Development files
+.vscode/
+.idea/
+
+# Build metadata
+.turbo/
+coverage/
+
+# Source maps
+*.map
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Environment files
+.env*

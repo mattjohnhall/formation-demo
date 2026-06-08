@@ -1,12 +1,21 @@
 {
   "name": "@thefa/formation-icons",
   "version": "0.0.1",
-  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "generate": "node scripts/generate-icons.mjs"
+    "generate": "node scripts/generate-icons.mjs",
+    "build:js": "tsup",
+    "build:types": "tsc -p tsconfig.json",
+    "build": "pnpm run build:js && pnpm run build:types"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
   },
   "dependencies": {
     "@mui/icons-material": "^7.3.5",

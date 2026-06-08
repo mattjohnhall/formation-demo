@@ -1,6 +1,6 @@
 import { Label } from './label'
 import { InfoIcon } from '@thefa/formation-icons'
-import { cn } from '@/lib/cn'
+import { cn } from '../lib/cn'
 
 type FormFieldProps = {
   label?: string

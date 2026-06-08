@@ -1,6 +1,6 @@
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { CheckIcon } from '@thefa/formation-icons'
-import { cn } from '@/lib/cn'
+import { cn } from '../lib/cn'
 
 type CheckboxProps =
   React.ComponentProps<typeof CheckboxPrimitive.Root> & {
@@ -29,7 +29,7 @@ export function Checkbox({
         {...props}
       >
         <CheckboxPrimitive.Indicator className="flex items-center justify-center">
-          <CheckIcon fontSize="20" />
+          <CheckIcon fontSize="medium" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
 

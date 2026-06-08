@@ -1,7 +1,7 @@
 import * as SelectPrimitive from '@radix-ui/react-select'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import CheckIcon from '@mui/icons-material/Check'
-import { cn } from '@/lib/cn'
+import { cn } from '../lib/cn'
 
 export const Select = SelectPrimitive.Root
 

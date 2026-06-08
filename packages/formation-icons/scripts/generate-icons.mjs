@@ -10,77 +10,48 @@ const iconsDir = path.dirname(
 
 const files = fs.readdirSync(iconsDir)
 
-const ignoredVariants = [
-  'Rounded',
-  'Sharp',
-  'TwoTone'
-]
+const ignoredVariants = ['Rounded', 'Sharp', 'TwoTone']
 
 const exportsMap = new Map()
 
 for (const file of files) {
-  if (!file.endsWith('.js')) {
-    continue
-  }
+  if (!file.endsWith('.js')) continue
 
   const iconName = file.replace('.js', '')
 
-  const isIgnoredVariant =
-    ignoredVariants.some((variant) =>
-      iconName.endsWith(variant)
-    )
+  // skip variants
+  if (ignoredVariants.some(v => iconName.endsWith(v))) continue
 
-  if (isIgnoredVariant) {
-    continue
-  }
-
+  // only outlined set
   const isOutlined =
     iconName.endsWith('Outlined') ||
     iconName.endsWith('Outline')
 
-  if (!isOutlined) {
-    continue
-  }
+  if (!isOutlined) continue
 
   const exportName =
     iconName
       .replace(/Outlined$/, '')
       .replace(/Outline$/, '') + 'Icon'
 
-  // Prefer Outlined over Outline
-  const existing =
-    exportsMap.get(exportName)
+  // prefer Outlined over Outline
+  const existing = exportsMap.get(exportName)
 
-  if (
-    !existing ||
-    iconName.endsWith('Outlined')
-  ) {
-    exportsMap.set(
-      exportName,
-      iconName
-    )
+  if (!existing || iconName.endsWith('Outlined')) {
+    exportsMap.set(exportName, iconName)
   }
 }
 
-const exports = Array.from(
-  exportsMap.entries()
-)
-  .sort(([a], [b]) =>
-    a.localeCompare(b)
-  )
+const output = Array.from(exportsMap.entries())
+  .sort(([a], [b]) => a.localeCompare(b))
   .map(
     ([exportName, iconName]) =>
       `export { default as ${exportName} } from '@mui/icons-material/${iconName}'`
   )
 
 fs.writeFileSync(
-  path.resolve(
-    process.cwd(),
-    'src/index.ts'
-  ),
-  exports.join('\n') + '\n'
+  path.resolve(process.cwd(), 'src/index.ts'),
+  output.join('\n') + '\n'
 )
 
-console.log(
-  `Generated ${exports.length} icons`
-)
+console.log(`Generated ${exportsMap.size} outlined icons`)

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import CheckIcon from '@mui/icons-material/Check'
-import { cn } from '@/lib/cn'
+import { cn } from '../lib/cn'
 
 function RadioGroup({
   className,
