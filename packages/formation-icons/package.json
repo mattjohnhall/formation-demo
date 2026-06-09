@@ -1,6 +1,6 @@
 {
   "name": "@thefa/formation-icons",
-  "version": "0.0.",
+  "version": "0.0.5",
   "main": "./index.ts",
   "files": ["dist"],
   "scripts": {
