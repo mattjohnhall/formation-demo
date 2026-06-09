@@ -1,13 +1,13 @@
 {
   "name": "@thefa/formation-icons",
-  "version": "0.0.2",
-  "main": "./src/index.ts",
+  "version": "0.0.",
+  "main": "./index.ts",
   "files": ["dist"],
   "scripts": {
     "generate": "node scripts/generate-icons.mjs"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./index.ts"
   },
   "dependencies": {
     "@mui/icons-material": "^7.3.5",

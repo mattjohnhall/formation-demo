@@ -3,7 +3,7 @@ import type {
   StoryObj
 } from '@storybook/react-vite'
 
-import * as Icons from './index'
+import * as Icons from '../index'
 
 const iconNames = Object.keys(Icons)
 

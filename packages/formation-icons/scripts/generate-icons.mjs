@@ -9,9 +9,7 @@ const iconsDir = path.dirname(
 )
 
 const files = fs.readdirSync(iconsDir)
-
 const ignoredVariants = ['Rounded', 'Sharp', 'TwoTone']
-
 const exportsMap = new Map()
 
 for (const file of files) {
@@ -50,8 +48,8 @@ const output = Array.from(exportsMap.entries())
   )
 
 fs.writeFileSync(
-  path.resolve(process.cwd(), 'src/index.ts'),
+  path.resolve(process.cwd(), 'index.ts'),
   output.join('\n') + '\n'
 )
 
-console.log(`Generated ${exportsMap.size} outlined icons`)
+console.log(`Generated ${exportsMap.size} icons`)

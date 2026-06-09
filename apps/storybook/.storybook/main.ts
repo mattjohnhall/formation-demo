@@ -9,7 +9,7 @@ const __dirname = path.dirname(
 
 const config: StorybookConfig = {
   stories: [
-    '../../../packages/**/src/**/*.stories.@(ts|tsx|mdx)'
+    '../../../packages/**/**/*.stories.@(ts|tsx|mdx)'
   ],
 
   addons: [
@@ -30,11 +30,11 @@ const config: StorybookConfig = {
     config.resolve.alias = {
       '@': path.resolve(
         __dirname,
-        '../../../packages/formation-england-football/src'
+        '../../../packages/formation-england-football'
       ),
       '@thefa/formation-icons': path.resolve(
         __dirname,
-        '../../../packages/formation-icons/src'
+        '../../../packages/formation-icons'
       )
     }
 

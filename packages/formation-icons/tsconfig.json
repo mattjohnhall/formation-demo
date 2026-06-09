@@ -9,8 +9,7 @@
     "moduleResolution": "Bundler",
     "verbatimModuleSyntax": true
   },
-  "include": ["src"],
   "exclude": [
-    "**/*.stories.*"
+    "stories/*.stories.*"
   ]
 }

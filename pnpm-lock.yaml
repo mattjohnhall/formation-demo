@@ -69,6 +69,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^4.1.8
         version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+      autoprefixer:
+        specifier: ^10.5.0
+        version: 10.5.0(postcss@8.5.15)
       eslint:
         specifier: ^10.3.0
         version: 10.4.1(jiti@2.7.0)
@@ -87,6 +90,9 @@ importers:
       playwright:
         specifier: ^1.60.0
         version: 1.60.0
+      postcss:
+        specifier: ^8.5.15
+        version: 8.5.15
       storybook:
         specifier: ^10.4.1
         version: 10.4.2(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -202,8 +208,8 @@ importers:
         specifier: 1.1.8
         version: 1.1.8(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@thefa/formation-icons':
-        specifier: workspace:*
-        version: link:../formation-icons
+        specifier: 0.0.1
+        version: 0.0.1(@types/react@18.3.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@types/react':
         specifier: 18.3.0
         version: 18.3.0
@@ -217,10 +223,10 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       react:
-        specifier: ^18.3.0
+        specifier: ^18 || ^19
         version: 19.2.7
       react-dom:
-        specifier: ^18.3.0
+        specifier: ^18 || ^19
         version: 19.2.7(react@19.2.7)
       tailwind-merge:
         specifier: 3.2.0
@@ -256,12 +262,6 @@ importers:
       '@mui/material':
         specifier: ^7.3.5
         version: 7.3.5(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-
-  tmp/figma-test:
-    dependencies:
-      '@thefa/formation-england-football':
-        specifier: link:../../packages/formation-england-football
-        version: link:../../packages/formation-england-football
 
 packages:
 
@@ -2257,6 +2257,9 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
+  '@thefa/formation-icons@0.0.1':
+    resolution: {integrity: sha512-5I79DyTCCOUG2Eu++9YDAmPmdXy7PXbeGnAG1TGiS2DWQ/lifEmeB66/v0WPtUaWmvsAUmx5ZJyuT15UKOEk9w==}
+
   '@turbo/darwin-64@2.9.16':
     resolution: {integrity: sha512-jLjApWTSNd7JZ5JaLYfelW1ytnGQOvB7ivl+2RD1xQvJTbi8I9gBjzcga7tDZVPyaxpl10YTfJt3BrYXR18KDw==}
     cpu: [x64]
@@ -2548,6 +2551,13 @@ packages:
 
   ast-v8-to-istanbul@1.0.3:
     resolution: {integrity: sha512-jCMQ6ZylLPudp0CDfBmQBZUsrh1/8psbmu9ibeVWKuHWD0YrH9YABwlKu5kVEFoT0GCQQW9Z/SxfuEbbkGQCRg==}
+
+  autoprefixer@10.5.0:
+    resolution: {integrity: sha512-FMhOoZV4+qR6aTUALKX2rEqGG+oyATvwBt9IIzVR5rMa2HRWPkxf+P+PAJLD1I/H5/II+HuZcBJYEFBpq39ong==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
 
   axe-core@4.12.0:
     resolution: {integrity: sha512-FTavr/7Ba0IptwGOPxnQvdyW2tAsdLBMTBXz7rKH6xJ2skpyxpBxyHkDdBs4lf69yRqYpkqCdfhnwS8YULGOmg==}
@@ -2872,6 +2882,9 @@ packages:
 
   flatted@3.4.2:
     resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
+
+  fraction.js@5.3.4:
+    resolution: {integrity: sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==}
 
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
@@ -3378,6 +3391,9 @@ packages:
         optional: true
       yaml:
         optional: true
+
+  postcss-value-parser@4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
   postcss@8.5.15:
     resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
@@ -5794,6 +5810,19 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.1
 
+  '@thefa/formation-icons@0.0.1(@types/react@18.3.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@emotion/react': 11.14.0(@types/react@18.3.0)(react@19.2.7)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@18.3.0)(react@19.2.7))(@types/react@18.3.0)(react@19.2.7)
+      '@mui/icons-material': 7.3.5(@mui/material@7.3.5(@emotion/react@11.14.0(@types/react@18.3.0)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.0)(react@19.2.7))(@types/react@18.3.0)(react@19.2.7))(@types/react@18.3.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(@types/react@18.3.0)(react@19.2.7)
+      '@mui/material': 7.3.5(@emotion/react@11.14.0(@types/react@18.3.0)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.0)(react@19.2.7))(@types/react@18.3.0)(react@19.2.7))(@types/react@18.3.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+    transitivePeerDependencies:
+      - '@mui/material-pigment-css'
+      - '@types/react'
+      - react
+      - react-dom
+      - supports-color
+
   '@turbo/darwin-64@2.9.16':
     optional: true
 
@@ -6154,6 +6183,15 @@ snapshots:
       estree-walker: 3.0.3
       js-tokens: 10.0.0
 
+  autoprefixer@10.5.0(postcss@8.5.15):
+    dependencies:
+      browserslist: 4.28.2
+      caniuse-lite: 1.0.30001797
+      fraction.js: 5.3.4
+      picocolors: 1.1.1
+      postcss: 8.5.15
+      postcss-value-parser: 4.2.0
+
   axe-core@4.12.0: {}
 
   babel-plugin-macros@3.1.0:
@@ -6497,6 +6535,8 @@ snapshots:
       keyv: 4.5.4
 
   flatted@3.4.2: {}
+
+  fraction.js@5.3.4: {}
 
   fsevents@2.3.2:
     optional: true
@@ -6927,6 +6967,8 @@ snapshots:
     optionalDependencies:
       jiti: 2.7.0
       postcss: 8.5.15
+
+  postcss-value-parser@4.2.0: {}
 
   postcss@8.5.15:
     dependencies:

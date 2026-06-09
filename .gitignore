@@ -54,9 +54,6 @@ Thumbs.db
 playwright-report/
 test-results/
 
-# Generated icon exports
-packages/formation-icons/src/index.ts
-
 # Misc
 .cache/
 .temp/
