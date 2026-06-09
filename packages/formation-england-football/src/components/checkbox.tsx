@@ -19,7 +19,7 @@ export function Checkbox({
       <CheckboxPrimitive.Root
         id={id}
         className={cn(
-          'peer h-5 w-5 shrink-0 rounded bg-white border-2 border-gray-600 cursor-pointer',
+          'peer h-6 w-6 shrink-0 rounded bg-white border-2 border-gray-600 cursor-pointer',
           'hover:border-ef-navy-400 hover:text-ef-navy-400',
           'data-[state=checked]:border-ef-navy-400 data-[state=checked]:text-ef-navy-400',
           'disabled:border-gray-200 disabled:text-gray-200 disabled:cursor-not-allowed',
@@ -29,7 +29,7 @@ export function Checkbox({
         {...props}
       >
         <CheckboxPrimitive.Indicator className="flex items-center justify-center">
-          <CheckIcon fontSize="medium" />
+          <CheckIcon fontSize="small" className="size-4" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
 

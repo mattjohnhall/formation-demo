@@ -22,7 +22,7 @@ function RadioGroupItem({
   return (
     <RadioGroupPrimitive.Item
       className={cn(
-        'aspect-square h-5 w-5 shrink-0 rounded-full bg-white border-2 border-gray-600 cursor-pointer',
+        'aspect-square h-6 w-6 shrink-0 rounded-full bg-white border-2 border-gray-600 cursor-pointer',
         'hover:border-ef-navy-400 hover:text-ef-navy-400',
         'data-[state=checked]:border-ef-navy-400 data-[state=checked]:text-ef-navy-400',
         'disabled:border-gray-200 disabled:text-gray-200 disabled:cursor-not-allowed',
@@ -32,7 +32,7 @@ function RadioGroupItem({
       {...props}
     >
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <RadioGroupPrimitive.Indicator className="relative flex size-full items-center justify-center after:block after:size-[8px] after:rounded-full after:bg-ef-navy-400" />
+        <RadioGroupPrimitive.Indicator className="relative flex size-full items-center justify-center after:block after:size-2.5 after:rounded-full after:bg-ef-navy-400" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
